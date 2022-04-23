@@ -1,11 +1,10 @@
 import ItemSet from "../models/itemSet";
 
 export function showConfidence(itemSet1, itemSet2) {
-
   const numerator = itemSet1.supportCount;
   const denominator = itemSet2.supportCount;
 
-  console.log(numerator / denominator);
+  return numerator / denominator;
 }
 
 const dataBase = new Map();
@@ -54,9 +53,7 @@ newItemSet = new ItemSet([2, 3]);
 newItemSet.supportCount = 2;
 dataBase.set(newItemSet.getPrimaryKey(), newItemSet);
 
-
 ///////////////////////////////////////////////////////
-
 
 // showConfidence(dataBase.get("1,2"), dataBase.get("1"));
 

@@ -39,7 +39,7 @@ export default class ItemSet {
     return this.listOfItems.size;
   }
 
-  increaseSupportCount() {
-    this.supportCount += 1;
+  increaseSupportCount(amount) {
+    this.supportCount += amount;
   }
 }
