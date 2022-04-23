@@ -1,22 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Item from "./components/Item";
+/*
+Components I need:
+
+Item
+Transaction ?
+Shopping Cart
+
+Support Count Display
+Minimum Support selector
+
+Confidence Displayer
+*/
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Item itemID={1} />
       </header>
     </div>
   );
