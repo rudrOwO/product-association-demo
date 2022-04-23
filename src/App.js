@@ -1,5 +1,7 @@
 import "./App.css";
-import Item from "./components/Item";
+import Cart from "./components/Cart";
+import dataBase from "./services/dataBase";
+
 /*
 Components I need:
 
@@ -17,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Item itemID={1} />
+        <Cart dataBase={dataBase} />
       </header>
     </div>
   );

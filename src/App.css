@@ -21,6 +21,18 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
+  margin: 10px;
+}
+
+.check-out {
+  font-size: 2rem;
+  width: 90%;
+  /* padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20;
+  padding-right: 20px; */
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .checker {
@@ -30,4 +42,8 @@
 
 .item-text {
    padding-left: 10px;
+}
+
+h3 {
+  padding-bottom: 15px;
 }

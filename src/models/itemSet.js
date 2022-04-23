@@ -1,16 +1,19 @@
 export default class ItemSet {
   listOfItems = new Set();
+  supportCount = 0;
 
-  constructor(itemID) {
-    this.value.add(itemID);
-  }
+  constructor() {}
 
-  toString() {
+  getPrimaryKey() {
     let str = "";
     for (const item of this.listOfItems) {
       str += item;
     }
     return str;
+  }
+
+  addItem(itemID) {
+    this.listOfItems.add(itemID);
   }
 
   join(otherSet) {
@@ -29,5 +32,9 @@ export default class ItemSet {
 
   getItemCount() {
     return this.listOfItems.size;
+  }
+
+  increaseSupportCount() {
+    this.supportCount += 1;
   }
 }
