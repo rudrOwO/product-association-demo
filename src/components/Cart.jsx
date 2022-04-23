@@ -4,17 +4,18 @@ import Item from "./Item";
 
 const Cart = ({ dataBase, setHistory }) => {
   const [checkedItems, setCheckedItems] = useState([]);
-  const checkedList = useRef(document.querySelectorAll("input"));
-  //   const [boxChecked, setBoxChecked] = useState(false);
+
+  console.log(checkedItems);
 
   return (
     <div className="cart">
-      <h3>Shopping Cart</h3>
+      <h3>Purchase Panel</h3>
+    <span>
+
       <Item itemID={1} setCheckedItems={setCheckedItems} />
-      <Item itemID={2} setCheckedItems={setCheckedItems} />
-      <Item itemID={3} setCheckedItems={setCheckedItems} />
-      <Item itemID={4} setCheckedItems={setCheckedItems} />
-      <Item itemID={5} setCheckedItems={setCheckedItems} />
+      <span className="item-text">X </span>
+      <Item itemID={1} setCheckedItems={setCheckedItems} />
+    </span>
       <button
         className="btn btn-danger check-out"
         onClick={e => {
@@ -34,11 +35,9 @@ const Cart = ({ dataBase, setHistory }) => {
           //     inp.checked = false;
           //   });
 
-          console.log(checkedList);
-          console.log(dataBase);
         }}
       >
-        CheckOut
+        Process
       </button>
     </div>
   );

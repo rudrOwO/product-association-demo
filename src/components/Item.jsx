@@ -1,17 +1,14 @@
 const Item = ({ itemID, setCheckedItems }) => {
   return (
-    <div className="item">
+    <span className="item">
       <input
         className="checker"
-        type="checkbox"
+        type="text"
         onChange={e => {
-          setCheckedItems(prev =>
-            e.target.checked ? [...prev, itemID] : prev
-          );
+          setCheckedItems(e.target.value);
         }}
       />
-      <span className="item-text">Item {itemID}</span>
-    </div>
+    </span>
   );
 };
 
