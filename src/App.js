@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Cart from "./components/Cart";
 import History from "./components/History";
@@ -17,12 +18,14 @@ Confidence Displayer
 */
 
 function App() {
+  const [history, setHistory] = useState([]);
+
   return (
     <div className="App">
       <header className="App-header">
         <div className="purchase">
-          <Cart dataBase={dataBase} />
-          <History dataBase={dataBase} />
+          <Cart dataBase={dataBase} setHistory={setHistory} />
+          <History history={history} />
         </div>
       </header>
     </div>

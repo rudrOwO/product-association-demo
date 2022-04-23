@@ -2,7 +2,7 @@ import { useState } from "react";
 import ItemSet from "../models/itemSet";
 import Item from "./Item";
 
-const Cart = ({ dataBase }) => {
+const Cart = ({ dataBase, setHistory }) => {
   const [checkedItems, setCheckedItems] = useState([]);
   //   const [boxChecked, setBoxChecked] = useState(false);
 
@@ -27,6 +27,7 @@ const Cart = ({ dataBase }) => {
           if (dataBase.has(key)) dataBase.get(key).increaseSupportCount();
           else dataBase.set(newItemSet.getPrimaryKey(), newItemSet);
 
+          setHistory([...checkedItems]);
           console.log(dataBase);
         }}
       >

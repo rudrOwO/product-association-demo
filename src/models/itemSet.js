@@ -20,16 +20,18 @@ export default class ItemSet {
   }
 
   join(otherSet) {
-    const newItemSet = new Set();
+    const listOfItems = new Set();
+    const newItemSet = new ItemSet();
 
     for (const item of this.listOfItems) {
-      newItemSet.add(item);
+      listOfItems.add(item);
     }
 
     for (const otherID of otherSet.listofIDs) {
-      newItemSet.add(otherID);
+      listOfItems.add(otherID);
     }
 
+    newItemSet.listOfItems = listOfItems;
     return newItemSet;
   }
 
