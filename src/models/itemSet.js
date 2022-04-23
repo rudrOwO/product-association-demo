@@ -5,11 +5,14 @@ export default class ItemSet {
   constructor() {}
 
   getPrimaryKey() {
-    let str = "";
+    const orderedString = [];
+
     for (const item of this.listOfItems) {
-      str += item;
+      orderedString.push(item);
     }
-    return str;
+
+    orderedString.sort();
+    return orderedString.toString();
   }
 
   addItem(itemID) {

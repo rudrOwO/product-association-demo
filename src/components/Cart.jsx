@@ -4,6 +4,8 @@ import Item from "./Item";
 
 const Cart = ({ dataBase }) => {
   const [checkedItems, setCheckedItems] = useState([]);
+  //   const [boxChecked, setBoxChecked] = useState(false);
+
   return (
     <div className="cart">
       <h3>Shopping Cart</h3>
@@ -20,6 +22,9 @@ const Cart = ({ dataBase }) => {
           for (const itemID of checkedItems) {
             newItemSet.addItem(itemID);
           }
+
+          dataBase.set(newItemSet.getPrimaryKey(), newItemSet);
+          console.log(dataBase);
         }}
       >
         CheckOut
