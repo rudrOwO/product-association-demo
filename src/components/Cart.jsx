@@ -23,7 +23,10 @@ const Cart = ({ dataBase }) => {
             newItemSet.addItem(itemID);
           }
 
-          dataBase.set(newItemSet.getPrimaryKey(), newItemSet);
+          const key = newItemSet.getPrimaryKey();
+          if (dataBase.has(key)) dataBase.get(key).increaseSupportCount();
+          else dataBase.set(newItemSet.getPrimaryKey(), newItemSet);
+
           console.log(dataBase);
         }}
       >

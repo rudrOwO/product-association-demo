@@ -40,6 +40,17 @@
    padding-left: 10px;
 }
 
+.purchase {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history {
+  margin-left: 70%;
+}
+
 h3 {
   padding-bottom: 15px;
 }

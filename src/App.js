@@ -1,5 +1,6 @@
 import "./App.css";
 import Cart from "./components/Cart";
+import History from "./components/History";
 import dataBase from "./services/dataBase";
 
 /*
@@ -19,7 +20,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Cart dataBase={dataBase} />
+        <div className="purchase">
+          <Cart dataBase={dataBase} />
+          <History dataBase={dataBase} />
+        </div>
       </header>
     </div>
   );
