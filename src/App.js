@@ -3,19 +3,9 @@ import "./App.css";
 import Cart from "./components/Cart";
 import History from "./components/History";
 import dataBase from "./services/dataBase";
+import dummy from "./services/test";
+console.log(dummy);
 
-/*
-Components I need:
-
-Item
-Transaction ?
-Shopping Cart
-
-Support Count Display
-Minimum Support selector
-
-Confidence Displayer
-*/
 
 function App() {
   const [history, setHistory] = useState([]);

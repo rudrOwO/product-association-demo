@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ItemSet from "../models/itemSet";
 import Item from "./Item";
 
 const Cart = ({ dataBase, setHistory }) => {
   const [checkedItems, setCheckedItems] = useState([]);
+  const checkedList = useRef(document.querySelectorAll("input"));
   //   const [boxChecked, setBoxChecked] = useState(false);
 
   return (
@@ -28,6 +29,12 @@ const Cart = ({ dataBase, setHistory }) => {
           else dataBase.set(newItemSet.getPrimaryKey(), newItemSet);
 
           setHistory([...checkedItems]);
+
+          //   checkedList.prototype.forEach(inp => {
+          //     inp.checked = false;
+          //   });
+
+          console.log(checkedList);
           console.log(dataBase);
         }}
       >
